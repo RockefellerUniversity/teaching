@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to GitHub Pages Tom
 
 You can use the [editor on GitHub](https://github.com/RockefellerUniversity/teaching/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
