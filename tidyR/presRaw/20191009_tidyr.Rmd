@@ -110,38 +110,16 @@ load(file='dataset/my_tidy.Rdata')
 
 ---
 ## Are all data frames equal - (pt1)?
-```{r,eval=FALSE,echo=TRUE}
+```{r}
 head(df1)
-```
-
-```{r,eval=TRUE,echo=FALSE}
-utils::head(df1)
-```
-
-```{r,eval=FALSE,echo=TRUE}
 head(df2)
-```
-
-```{r,eval=TRUE,echo=FALSE}
-utils::head(df2)
 ```
 
 ---
 ## Are all data frames equal - (pt2)?
-```{r,eval=FALSE,echo=TRUE}
+```{r}
 head(df3a)
-```
-
-```{r,eval=TRUE,echo=FALSE}
-utils::head(df3a)
-```
-
-```{r,eval=FALSE,echo=TRUE}
 head(df3b)
-```
-
-```{r,eval=TRUE,echo=FALSE}
-utils::head(df3b)
 ```
 
 ---
@@ -197,7 +175,7 @@ This package contains a variety of tools to access and manipulate dataframes.
 **Select** allows you to make a vector from a specific variable
 ```{r}
 # Select one variable (common_name)
-dplyr::select(df1, common_name)
+select(df1, common_name)
 ```
 
 ---
@@ -205,7 +183,7 @@ dplyr::select(df1, common_name)
 **Select** allows you to make a dataframe from several variables
 ```{r}
 # Select two variables (age_classbylength and common_name)
-dplyr::select(df1, age_classbylength, common_name)
+select(df1, age_classbylength, common_name)
 ```
 
 ---
@@ -213,7 +191,7 @@ dplyr::select(df1, age_classbylength, common_name)
 **Select** allows you to make a dataframe excluding a variable
 ```{r}
 # Select all but one variable (length_mm)
-dplyr::select(df1,-length_mm)
+select(df1,-length_mm)
 ```
 
 ---
@@ -221,7 +199,7 @@ dplyr::select(df1,-length_mm)
 **Select** allows you to make a dataframe from a range of variables
 ```{r}
 # Select all a range of contiguous varibles (common_name:length_mm)
-dplyr::select(df1, common_name:length_mm)
+select(df1, common_name:length_mm)
 ```
 
 ---
@@ -267,11 +245,11 @@ filter(df1, length_mm > 200 | length_mm < 120)
 ```{r}
 # Create a dataframe of the variables *age* and *IGF* of only the *Steelhead* fish
 df1_A <- filter(df1, common_name == 'Steelhead')
-dplyr::select(df1_A, age_classbylength, IGF1_ng_ml)
+select(df1_A, age_classbylength, IGF1_ng_ml)
 
 # Create a dataframe of all variables but the *IGF* values, for all fish that begin with *S*
 df1_A <- filter(df1, str_starts(common_name,'S'))
-dplyr::select(df1_A, -IGF1_ng_ml)
+select(df1_A, -IGF1_ng_ml)
 ```
 
 ---
