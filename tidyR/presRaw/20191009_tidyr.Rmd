@@ -161,14 +161,10 @@ library(tidyverse)
 ```
 
 ---
-## These tools have same logic
-
- -> insert graphic here
- https://github.com/trinker/tidyr_in_a_nutshell
-
----
 # dplyr
-This package contains a variety of tools to access and manipulate dataframes.
+This package contains a variety of tools to access and manipulate dataframes.  
+These tools have same logic:
+
 
 ---
 ## dplyr::select - (pt1)
